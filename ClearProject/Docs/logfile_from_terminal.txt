@@ -1,3 +1,4 @@
+При генерации исполняемого файла с глобальной директории с помощью autogen.sh:
 depbase=`echo ndpiReader.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
 
 gcc -DHAVE_CONFIG_H -I. -I../src/include  -I../src/include -I../src/lib/third_party/include    -pthread  -g -O2 -MT ndpiReader.o -MD -MP -MF $depbase.Tpo -c -o ndpiReader.o ndpiReader.c &&\
@@ -14,9 +15,7 @@ mv -f $depbase.Tpo $depbase.Po
 
 libtool: link: gcc -pthread -g -O2 -o ndpiReader ndpiReader.o ndpi_util.o  ../src/lib/.libs/libndpi.a -lpcap -lm -pthread
 
-
-
-
+При генерации исполняемого файла с локальной директории с помощью make:
 depbase=`echo ndpiReader.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
 
 gcc -DHAVE_CONFIG_H -I. -I../src/include  -I../src/include -I../src/lib/third_party/include    -pthread  -g -O2 -MT ndpiReader.o -MD -MP -MF $depbase.Tpo -c -o ndpiReader.o ndpiReader.c &&\
