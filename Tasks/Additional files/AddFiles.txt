@@ -1,0 +1,4 @@
+Для заданий "1team-3tasks.txt" прилагаются файлы:
+
+- test_mac_addr (тестовый mac-адрес)
+- list_mac_addr_company (список mac-адресов по компаниям)
